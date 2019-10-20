@@ -19,7 +19,7 @@ const store = createStore(
     compose(
         applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
         reduxFirestore(firebase),
-        //reactReduxFirebase(firebase),
+        reactReduxFirebase(firebase, {attachAuthIsReady: true}),
     )
 );
 
@@ -28,7 +28,7 @@ const rrfProps = {
     config: fdConfig,
     dispatch: store.dispatch,
     createFirestoreInstance
-}
+};
 
 ReactDOM.render(
     <Provider store={store}>
