@@ -1,8 +1,7 @@
 import React from 'react'
 
 const ProjectSummary = ({project}) => {
-    console.log(project.title);
-    
+    //console.log(project.title);
     return (
         <div className="project-list section">
 
